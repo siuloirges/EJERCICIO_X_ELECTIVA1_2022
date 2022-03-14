@@ -1,0 +1,80 @@
+
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.factura{
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: #62baea;
+    color: white;
+    border-radius: 20px;
+
+}
+
+/* .factura::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background: 
+     
+     linear-gradient(-135deg ,#fff 12px, transparent 0% ),
+     linear-gradient(135deg ,#fff 12px, transparent 0% );
+
+    background-size: 24px;
+}
+
+.factura::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background: 
+     
+     linear-gradient(-45deg ,#fff 12px, transparent 0% ),
+     linear-gradient(45deg ,#fff 12px, transparent 0% );
+
+    background-size: 24px;
+} */
+
+.factura{
+    margin-top: 150px;
+    transform: scale(1.4);
+    padding: 25px;
+    overflow-y: auto;
+}
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width:10px;
+}
+
+*::-webkit-scrollbar-button:increment,*::-webkit-scrollbar-button {
+    display: none;
+} 
+
+*::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: #797979;
+    border-radius: 20px;
+    border: 2px solid white
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;  
+}

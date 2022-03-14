@@ -1,0 +1,213 @@
+
+
+#box{
+    /* background-color: red; */
+    position: relative;
+    width: 300px;
+    height: 300px;
+    transform-style: preserve-3d;
+    /* transform: rotateX(-30deg) rotateY(0deg) scaley(.6) scaleX(.6) scaleZ(.6); */
+    transform:  rotateY(0deg) rotateX(0deg) rotateY(0deg ) translateY(0px) scaley(.4) scaleX(.4) scaleZ(.4);
+    transition: 1s;
+    /* animation: animateBox 10s alternate-reverse infinite; */
+    animation: initial1 1s reverse;
+    
+   
+   
+}
+
+
+
+/* #box:hover
+{
+    transform: rotateX(-30deg) rotateY(0deg) scaley(.4) scaleX(.4) scaleZ(.4);
+} */
+
+@keyframes initial1{
+    0%{ 
+         transform: rotateY(0deg) rotateX(0deg) scaley(.4) translateY(0px)  scaleX(.4) scaleZ(.4);
+       
+    }
+    
+    100%{
+        transform: rotateY(-10deg) rotateX(-10deg) rotateY(-10deg) translateY(-50px) scaley(.4) scaleX(.4) scaleZ(.4);
+    }
+}
+
+
+@keyframes animateBox{
+    0%{
+        transform: rotateX(-30deg) rotateY(0deg) scaley(.3) scaleX(.3) scaleZ(.3);
+    }
+    
+    100%{
+        transform: rotateX(-30deg) rotateY(360deg) scaley(.3) scaleX(.3) scaleZ(.3);
+    }
+}
+
+#box::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left:0;
+    width: 300px;
+    height: 300px;
+     transform: rotateX(90deg) translateZ(-220px);
+    background-color: rgba(0, 0, 0, 0.25);
+    filter: blur(30px);
+}
+
+#box div {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+}
+
+#box div span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /* display: block; */
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.infotape
+{
+    transform: rotateY(0deg) translate3d(0,0,160px) scale(.7);
+
+    border-radius: 20px;
+}
+
+#box div span:nth-child(1){
+        transform: rotateY(0deg) translate3d(0,0,150px);
+        background: #dEaa77;
+}
+
+#box div span:nth-child(1)::before{
+   content: '';
+   position: absolute;
+   width: 200px;
+   height: 200px;
+   /* background:white; */
+   border-radius: 2px;
+   background-size: 200px;
+   background-repeat: no-repeat;
+   background-position: center;
+}
+
+.notes{
+    background-color: red;
+}
+
+#box div span:nth-child(2){
+        transform: rotateY(90deg) translate3d(0,0,150px);
+        background: #ca9864;
+}
+
+#box div span:nth-child(3){
+        transform: rotateY(180deg) translate3d(0,0,150px);
+        background: #ca9864;
+}
+
+#box div span:nth-child(3)::before{
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    /* background: white; */
+    border-radius: 2px;
+    background-size: 200px;
+    background-repeat: no-repeat;
+    background-position: center;
+ }
+
+#box div span:nth-child(4){
+        transform: rotateY(270deg) translate3d(0,0,150px);
+        background: #ca9864;
+}
+
+#box .top{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+     transform-style: preserve-3d;
+    background: #e8bb84;
+    display: flex;
+    align-items: center;
+    transform: rotateX(90deg) translateZ(150px);
+    /* perspective: 500px; */
+}
+
+#box .top::after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 300px;
+    background: #e8bb84;
+    display: flex;
+    align-items: center;
+    transform: rotateX(180deg) translate3d(0,0,300px);
+}
+
+#box .top::before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 60px;
+    background: rgba(53, 53, 53,0.4);
+    background-size: 85px;
+}
+
+.tape{
+    position: absolute;
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%) rotate(0deg);
+    width: 60px;
+    height: 90px;
+    background: rgba(53, 53, 53,0.4) ;
+    
+}
+
+
+.tape::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 24px;
+    background: 
+     
+    linear-gradient(-45deg ,#ca9864 12px, transparent 0% ),
+    linear-gradient(45deg ,#ca9864 12px, transparent 0% );
+
+    background-size: 24px;
+}
+
+.infoProduct{
+    background-color: white;
+    /* border-radius: 20px; */
+    color: black;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 20px;
+    font-weight: 100;
+    text-align: center;
+    justify-content: center;
+    padding: 0px;
+
+
+}
